@@ -18,6 +18,7 @@ npm i -g typescript
 ### Clone the Repository
 
 ```
+git clone https://github.com/Fa-doon/todo_ts.git
 ```
 
 You can now install the dependencies using this command
