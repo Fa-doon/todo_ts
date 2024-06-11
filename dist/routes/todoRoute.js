@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const todoController_1 = require("../controllers/todoController");
+const authCheck_1 = require("../middlewares/authCheck");
+const todoValidation_1 = require("../middlewares/todoValidation");
+const router = (0, express_1.Router)();
+router.use(authCheck_1.isUser);
+router.post("/", todoValidation_1.validateNewTask, todoController_1.createTodo);
+router.get("/", todoController_1.getAllTodos);
+router.get("/:id", todoController_1.getTodo);
+router.put("/:id", todoValidation_1.validateUpateTask, todoController_1.updateTodo);
+router.delete("/:id", todoController_1.deleteTodo);
+exports.default = router;
