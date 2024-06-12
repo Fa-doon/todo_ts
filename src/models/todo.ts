@@ -8,6 +8,7 @@ import {
   AutoIncrement,
   AllowNull,
   BelongsTo,
+  Default,
 } from "sequelize-typescript";
 import User from "./user";
 
@@ -34,6 +35,11 @@ export default class Todo extends Model {
   @Column(DataType.INTEGER)
   @ForeignKey(() => User)
   userId!: number;
+
+  @AllowNull(false)
+  @Default(false)
+  @Column(DataType.BOOLEAN)
+  completed!: boolean;
 
   @BelongsTo(() => User)
   user!: User;
