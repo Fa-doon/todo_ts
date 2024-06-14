@@ -84,7 +84,6 @@ export const loginUser: RequestHandler = async (
       token: token,
     });
   } catch (error) {
-    console.log("Error logging in user", error);
     res.status(500).json({
       message: "Something went wrong",
     });

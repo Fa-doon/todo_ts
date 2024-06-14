@@ -47,7 +47,6 @@ export const isUser = async (
 
     next();
   } catch (error) {
-    console.log("Authentication error", error);
     res.status(403).json({
       message: "Forbidden, invalid or expired token",
     });

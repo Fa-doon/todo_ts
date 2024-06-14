@@ -26,7 +26,6 @@ export const createTodo: RequestHandler = async (
       todo: createdTodo,
     });
   } catch (error) {
-    console.log("Error creating task", error);
     res.status(500).json({
       message: "Something went wrong",
     });
@@ -52,7 +51,6 @@ export const getAllTodos: RequestHandler = async (
       todos: tasks,
     });
   } catch (error) {
-    console.log("Error retrieving tasks", error);
     res.status(500).json({
       message: "Something went wrong",
     });
@@ -85,7 +83,6 @@ export const getTodo: RequestHandler = async (
       });
     }
   } catch (error) {
-    console.log("Error retrieving task", error);
     res.status(500).json({
       message: "Something went wrong",
     });
@@ -124,7 +121,6 @@ export const updateTodo: RequestHandler = async (
       updatedTodo: todo,
     });
   } catch (error) {
-    console.log("Error updating task", error);
     res.status(500).json({
       message: "Something went wrong",
     });
@@ -159,7 +155,6 @@ export const deleteTodo: RequestHandler = async (
       message: "Task deleted successfully",
     });
   } catch (error) {
-    console.log("Error deleting task", error);
     res.status(500).json({
       message: "Something went wrong",
     });
