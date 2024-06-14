@@ -15,6 +15,10 @@ app.use(express.json());
 app.use("/api/todo", todoRoute);
 app.use("/api/auth", authRoute);
 
+app.get("/", (req: express.Request, res: express.Response) =>{
+  res.status(200).send("<h2>Welcome to the todo api</>")
+})
+
 app.get("*", (req: express.Request, res: express.Response) => {
   res.status(404).send("Route does not exist");
 });
