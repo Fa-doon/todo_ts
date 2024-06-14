@@ -61,5 +61,6 @@ npm run dev
 | PUT | api/todo/:id | update task |
 | DELETE | api/todo/:id | delete task |
 
-You can also view the [API documentation](https://documenter.getpostman.com/view/28499333/2sA3XMjPGe). 
-[Hosted link on Render](https://todo-ts-4z5s.onrender.com/)
+You can also check the links below for the API documentation and hosted link  
+- [API documentation](https://documenter.getpostman.com/view/28499333/2sA3XMjPGe)
+- [Hosted link on Render](https://todo-ts-4z5s.onrender.com/)
