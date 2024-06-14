@@ -12,6 +12,7 @@ const sequelize = new sequelize_typescript_1.Sequelize({
     username: env_1.DB_USER,
     password: env_1.DB_PASSWORD,
     host: env_1.DB_HOST,
+    port: env_1.DB_PORT,
     dialect: "mysql",
     logging: false,
     models: [todo_1.default, user_1.default],
