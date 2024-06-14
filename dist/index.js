@@ -29,7 +29,7 @@ db_1.default
     .authenticate()
     .then(() => {
     console.log("Database connected successfully");
-    return db_1.default.sync();
+    return db_1.default.sync({ alter: true });
 })
     .then(() => {
     console.log("Models synced");

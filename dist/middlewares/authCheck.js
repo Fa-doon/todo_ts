@@ -41,7 +41,6 @@ const isUser = (req, res, next) => __awaiter(void 0, void 0, void 0, function* (
         next();
     }
     catch (error) {
-        console.log("Authentication error", error);
         res.status(403).json({
             message: "Forbidden, invalid or expired token",
         });

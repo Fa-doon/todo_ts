@@ -31,7 +31,6 @@ const createTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         });
     }
     catch (error) {
-        console.log("Error creating task", error);
         res.status(500).json({
             message: "Something went wrong",
         });
@@ -56,7 +55,6 @@ const getAllTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         });
     }
     catch (error) {
-        console.log("Error retrieving tasks", error);
         res.status(500).json({
             message: "Something went wrong",
         });
@@ -89,7 +87,6 @@ const getTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
     }
     catch (error) {
-        console.log("Error retrieving task", error);
         res.status(500).json({
             message: "Something went wrong",
         });
@@ -123,7 +120,6 @@ const updateTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         });
     }
     catch (error) {
-        console.log("Error updating task", error);
         res.status(500).json({
             message: "Something went wrong",
         });
@@ -153,7 +149,6 @@ const deleteTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         });
     }
     catch (error) {
-        console.log("Error deleting task", error);
         res.status(500).json({
             message: "Something went wrong",
         });
