@@ -15,6 +15,12 @@ const port = env_1.PORT || 3000;
 app.use(express_1.default.json());
 app.use("/api/todo", todoRoute_1.default);
 app.use("/api/auth", authRoute_1.default);
+app.get("/", (req, res) => {
+    res.status(200).send("<h2>Welcome to the todo api</>");
+});
+app.get("*", (req, res) => {
+    res.status(404).send("Route does not exist");
+});
 app.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });
 });

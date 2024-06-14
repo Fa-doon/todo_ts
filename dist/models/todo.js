@@ -40,6 +40,12 @@ __decorate([
     __metadata("design:type", Number)
 ], Todo.prototype, "userId", void 0);
 __decorate([
+    (0, sequelize_typescript_1.AllowNull)(false),
+    (0, sequelize_typescript_1.Default)(false),
+    (0, sequelize_typescript_1.Column)(sequelize_typescript_1.DataType.BOOLEAN),
+    __metadata("design:type", Boolean)
+], Todo.prototype, "completed", void 0);
+__decorate([
     (0, sequelize_typescript_1.BelongsTo)(() => user_1.default),
     __metadata("design:type", user_1.default)
 ], Todo.prototype, "user", void 0);
